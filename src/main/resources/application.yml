@@ -1,0 +1,30 @@
+    server:
+      port: 8080
+
+    spring:
+      application:
+        name: demo-booking
+      datasource:
+        url: jdbc:postgresql://localhost:5432/booking_park
+        username: booking_user
+        password: 1234
+        driver-class-name: org.postgresql.Driver
+      jpa:
+        hibernate:
+          ddl-auto: update
+          naming:
+            physical-strategy:
+        properties:
+          hibernate:
+            format_sql: true
+        database: postgresql
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+
+      data:
+        mongodb:
+          uri: mongodb+srv://bookingmng_user:1234@cluster0.s68zckg.mongodb.net/
+          auto-index-creation: true
+
+
+
